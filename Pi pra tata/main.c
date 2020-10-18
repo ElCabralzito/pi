@@ -39,6 +39,7 @@ int main(){
 	BITMAP* fundomenu = load_bitmap("fundomenu.bmp",NULL);
 	BITMAP* menuzin = load_bitmap("menu.bmp",NULL);
 	BITMAP* fandangos = load_bitmap("fandangos.bmp",NULL);
+	BITMAP* pedra = load_bitmap("alala.bmp",NULL);
     
     //sons
     SAMPLE *passoUm = load_sample("step1.flac");
@@ -56,6 +57,7 @@ int main(){
     fundobackup = fundo;
     
     int troca = 0;
+    
     //inicio
 	while(!key[KEY_SPACE]){
 
@@ -80,7 +82,7 @@ int main(){
 			if(ym == -150){
 				verti *= -1;
 			} 
-
+			
 		
 		draw_sprite(buffer, fundomenu, 0,0);
 		draw_sprite(buffer, fandangos, 100 + xm,100 + ym);
@@ -108,6 +110,12 @@ int main(){
 	}
 	//Jogo
     while(vida != vida0){
+		
+		if(y == -330){
+			gameover = pedra;
+			break;
+		}
+			
 		
 		//treco da barra de vida
 		if(x == -60){ //cheia
@@ -203,6 +211,7 @@ int main(){
 		draw_sprite(buffer, vida, 10 , 10);
 		draw_sprite(buffer, corona, 600 , 400);
         draw_sprite(buffer, face, 50 + x, 300 + y);
+        textprintf_ex(buffer, font, 200, 560, makecol(0,0,0), -1, "mx %i my %i",x, y);
         draw_sprite(screen, buffer, 0, 0);
        
 
@@ -241,6 +250,7 @@ int main(){
 	destroy_bitmap(dificil);
 	destroy_bitmap(gameover);
 	destroy_bitmap(fundomenu);
+	destroy_bitmap(pedra);
     return 0;
 }
 END_OF_MAIN();
