@@ -1,0 +1,41 @@
+
+//n sei se precisa
+BITMAP* image0 = load_bitmap("image0.bmp",NULL);
+    BITMAP* image1 = load_bitmap("image1.bmp",NULL);
+    BITMAP* image2 = load_bitmap("image2.bmp",NULL);
+    BITMAP* image3 = load_bitmap("image3.bmp",NULL);
+    BITMAP* image4 = load_bitmap("image4.bmp",NULL);
+    BITMAP* image5 = load_bitmap("image5.bmp",NULL);
+
+//vida
+		if (health = 0){image_index = 5}
+		if (health >0 and health <= 20) {image_index = 4}
+		if (health >21 and health <= 40) {image_index = 3}
+		if (health >41 and health <= 60) {image_index = 2}
+		if (health >61 and health <= 80) {image_index = 1}
+		if (health >81 and health <= 100) {image_index = 0}
+
+    	//vida
+    	if (health == 0) room_restart()// Se vida for igual a 0 a room reiniciara
+		if (health > 100) {health = 100} // se vida for maior que 100 sera igual a 100
+		
+		//
+		if(key[KEY_A]){
+        health += -10// Sera diminuido 10 de health
+        }
+        
+        if(key[KEY_S]){
+        health += 10// Sera aumentado 10 de health
+        }
+
+	//acho q ta errado pq precisa ainda de um objeto de barra e ai de um sprite da barra e ai no evento create tem que ter health = 100, image_speed = 0 ;	
+	draw_sprite(barra,ceil(health/20),view_xview+110,view_yview+20)
+		
+
+	// n sei se precisa
+	destroy_bitmap(image0);
+	destroy_bitmap(image1);	
+	destroy_bitmap(image2);	
+	destroy_bitmap(image3);	
+	destroy_bitmap(image4);		
+	destroy_bitmap(image5);	
