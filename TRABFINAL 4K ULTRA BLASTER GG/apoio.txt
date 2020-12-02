@@ -1,0 +1,80 @@
+305 y
+239 y
+
+435 x
+
+Left
+if(obj2.y < 239 && obj2.y > 305 ) {obj2.x != 435}
+
+Right
+if(obj2.y < 239 && obj2.y > 305 ) {obj2.x != 369}
+
+Down
+if(obj2.x < 426 && obj2.x > 378 ) {obj2.y != 308}
+
+Up
+if(obj2.x < 426 && obj2.x > 378 ) {obj2.y != 245}
+
+Win
+if(obj2.x > 35 && obj2.x < 60 && obj2.x == 54) {break}
+
+
+
+coron1.x =720;
+coron1.y = 452;
+coron1Lim.x = L= 440, R = 740; 
+
+coron2.x =505;
+coron2.y = 530;
+coron2Lim.y = Up= 20, Down = 540; 
+
+coron3.x = 640;
+coron3.y = 80;
+coron3Lim.y = Up= 20, Down = 540; 
+
+coron4.x =520;
+coron4.y = 320;
+coron4Lim.x = R= 740, L = 500; 
+
+coron5.x =520;
+coron5.y = 190;
+coron5Lim.x = R= 740, L = 440; 
+
+coron6.x =520;
+coron6.y =90;
+coron6Lim.x = R= 740, L = 500; 
+
+coron7.x =460;
+coron7.y =500;
+
+coron8.x =330;
+coron8.y =25;
+coron8Lim.x = R= 60, L = 350; 
+
+coron9.x =80;
+coron9.y =160;
+coron9Lim.x = R= 60, L = 350; 
+
+coron10.x =330;
+coron10.y =350;
+coron10Lim.x = R= 60, L = 350; 
+
+coron11.x =80;
+coron11.y =440;
+coron11Lim.x = R= 60, L = 350; 
+
+coron12.x =350;
+coron12.y =430;
+
+coron13.x =70;
+coron13.y =420;
+
+coron14.x =330;
+coron14.y =90;
+
+coron15.x =90;
+coron15.y =250;
+
+coron16.x =200;
+coron16.y =30;
+coron16Lim.x = UP= 30, DOWN = 550; 
